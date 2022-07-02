@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "372094160885",
+    "project_id": "problock-e9c16",
+    "storage_bucket": "problock-e9c16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372094160885:android:7d719fdf890b7bd0ee9abc",
+        "android_client_info": {
+          "package_name": "com.example.problock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372094160885-9u0t7bh3gcuqc67rhek4lssf2e767m65.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.problock",
+            "certificate_hash": "dca1eca602ebbcc6a2ab1e8d19e8fc4fa0cfdcdf"
+          }
+        },
+        {
+          "client_id": "372094160885-ik0v5e08r90sg2kqdc7en7jgm2ssrn2l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.problock",
+            "certificate_hash": "f16e5fe561449239a4709658eae80b6e0f307435"
+          }
+        },
+        {
+          "client_id": "372094160885-mmh43l8idt7mtpo0hodtr3r7dl1t75lb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.problock",
+            "certificate_hash": "47ca2eeeb4d36d8d72253134f333cb3e4d942f8f"
+          }
+        },
+        {
+          "client_id": "372094160885-7gqobjcjlsl7gep3kho4s2o7ljsv8ufg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0xW2Gklxrzl4qpU8Mn3zIh0GM9VT2tKk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "372094160885-7gqobjcjlsl7gep3kho4s2o7ljsv8ufg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "372094160885-54iaetoqbdvi45hnss3qudoim864phgr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.problock"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
