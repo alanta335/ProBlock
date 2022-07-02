@@ -55,8 +55,6 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
             Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
               CountItem(count: "72", text: "Total items owned"),
-              CountItem(count: "12", text: "Total items owned"),
-              CountItem(count: "24", text: "Total items owned"),
             ]),
             SizedBox(
               height: 100,

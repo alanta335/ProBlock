@@ -1,10 +1,8 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 // ignore_for_file: prefer_const_constructors
-
+import 'history2.dart';
 import 'package:http/http.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -53,14 +51,19 @@ class HistoryPage extends StatelessWidget {
                 ),
                 leading: CircleAvatar(
                     backgroundImage: NetworkImage(
-                        "https://www.cbj.ca/wp-content/uploads/2018/12/Sunder-Pichai1.jpg")),
+                        "https://images-na.ssl-images-amazon.com/images/I/71zGrrAe5NL._AC._SR360,460.jpg")),
                 children: <Widget>[
                   ListTile(
                     title: const Text('Hell'),
                     subtitle: Text("Series Number"),
                     trailing: Container(
                         child: IconButton(
-                            onPressed: () {}, icon: Icon(Icons.arrow_forward))),
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (ctx) => History2(
+                                      int.parse(document.get('serial_no')))));
+                            },
+                            icon: Icon(Icons.arrow_forward))),
                   )
                 ],
               );
@@ -103,4 +106,3 @@ class HistoryPage extends StatelessWidget {
     // }
   }
 }
-

@@ -3,14 +3,17 @@ import 'package:web3dart/web3dart.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart';
 
-class History extends StatefulWidget {
-  const History({Key? key}) : super(key: key);
+class History2 extends StatefulWidget {
+  int serial;
+  History2(this.serial, {Key? key}) : super(key: key);
 
   @override
-  State<History> createState() => _HistoryState();
+  State<History2> createState() => _History2State(serial);
 }
 
-class _HistoryState extends State<History> {
+class _History2State extends State<History2> {
+  int s;
+  _History2State(this.s);
   late Client httpClient;
   late Web3Client ethClient;
   final myAddress = "0x912e0dc0ba8C442C516537bA3dfd23cb269ABaEc";
@@ -30,21 +33,20 @@ class _HistoryState extends State<History> {
     var x = await query("returnarr", []);
     print(x[0][0]);
     List<Widget> widgets = [];
-    for (var i = 0; i < x[0][0].length; i++) {
-      widgets.add(new Card(
-          child: SizedBox(
-        height: 40,
-        child: Center(
-            child: Column(
-          children: [
-            Text("Owner ID : " + x[0][0][i][0].toString()),
-            Text("Owner Name: " + x[0][0][i][1].toString()),
-          ],
-        )),
-      )));
+    for (var i = 0; i < x[0][s].length; i++) {
+      print(x[0][3].length);
+      widgets.add(ListTile(
+          title: Center(child: Text("Owner Name: " + x[0][s][i][1].toString())),
+          subtitle: Center(
+              child: Column(
+            children: [
+              Text("Owner ID : " + x[0][s][i][0].toString()),
+              Divider(),
+            ],
+          ))));
     }
 
-    print(x[0][0]);
+    print(x[0][s]);
     return widgets;
   }
 

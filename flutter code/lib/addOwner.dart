@@ -5,6 +5,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:http/http.dart';
+import 'package:problock/history.dart';
+import 'package:problock/homepage.dart';
 import 'package:web3dart/web3dart.dart';
 
 class addOwner extends StatefulWidget {
@@ -93,7 +95,8 @@ class _addOwnerState extends State<addOwner> {
   }
 
   Future<String> submit(String functionName, List<dynamic> args) async {
-    EthPrivateKey credentials = EthPrivateKey.fromHex("private key");
+    EthPrivateKey credentials = EthPrivateKey.fromHex(
+        "private key");
     DeployedContract contract = await loadContract();
     final ethFunction = contract.function(functionName);
     final result = await ethClient.sendTransaction(
@@ -109,12 +112,13 @@ class _addOwnerState extends State<addOwner> {
   Widget build(BuildContext context) {
     var r = widget.sno;
     return Scaffold(
-        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-      ElevatedButton(
-          onPressed: () {
-            add(r);
-          },
-          child: Text("Do you want to add to block?")),
-    ]));
+        body: Center(
+          child: ElevatedButton(
+              onPressed: () {
+                add(r);
+                Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => homePage()));
+              },
+              child: Text("Do you want to add to block?")),
+        ));
   }
 }
